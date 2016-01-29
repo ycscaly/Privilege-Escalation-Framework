@@ -24,7 +24,7 @@
 #define DRIVER_NAME       "Vulnerable Driver"
 
 #define DEVICE_NAME      L"\\Device\\VulnerableDevice"
-#define DOS_DEVICE_NAME  L"\\DosDevices\\VulnerableDOSDevice"
+#define DOS_DEVICE_NAME  L"\\\\.\\VulnerableDOSDevice"
 
 #define IOCTL_UPDATE_WHAT  CTL_CODE(FILE_DEVICE_UNKNOWN, 0x800, METHOD_BUFFERED, FILE_ANY_ACCESS)
 #define IOCTL_UPDATE_WHERE CTL_CODE(FILE_DEVICE_UNKNOWN, 0x801, METHOD_BUFFERED, FILE_ANY_ACCESS)

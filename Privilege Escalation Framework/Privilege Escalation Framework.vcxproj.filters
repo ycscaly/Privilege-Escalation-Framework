@@ -16,6 +16,9 @@
     <Filter Include="Source Files\Vulnerability Exposers">
       <UniqueIdentifier>{ae060239-7a82-4d8a-8caf-a85d1ba4ffa2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Exploitation Methods">
+      <UniqueIdentifier>{35d74ece-805c-4cb9-a195-e1022977f5db}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Vulnerable Driver Exposer.cpp">
@@ -24,6 +27,9 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Virtual Tables Self Reference Exploiter.cpp">
+      <Filter>Source Files\Exploitation Methods</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vulnerabilities.h">
@@ -31,6 +37,12 @@
     </ClInclude>
     <ClInclude Include="Vulnerable Driver Definitions.h">
       <Filter>Source Files\Vulnerability Exposers</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploitation Methods.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Virtual Memory x64.h">
+      <Filter>Source Files\Exploitation Methods</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

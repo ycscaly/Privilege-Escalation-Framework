@@ -1,6 +1,7 @@
 #include "Vulnerabilities.h"
 #include <stdio.h>
-void main() {
+int main() {
+
 	int test = 0;
 	
 	VulnerableDriverWriteWhatWhere((UINT64)5, (UINT64)&test);
@@ -9,6 +10,6 @@ void main() {
 	test = 0;
 	VulnerableDriverIncrementArbitraryByte((UINT64)&test);
 	printf("Vulnerable Driver Increment Arbitrary Byte vulnerbility trigger was %s\n", test == 1 ? "succefull" : "pure failure");
-
-	return;
+	
+	return 0;
 }
