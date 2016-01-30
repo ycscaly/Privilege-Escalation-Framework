@@ -15,3 +15,4 @@ typedef void(*KERNEL_CONTROL_PROGRAM_COUNTER_VULNERABILITY)(UINT64 newProgramCou
 */
 extern WRITE_WHAT_WHERE_VULNERABILITY VulnerableDriverWriteWhatWhere;
 extern INCREMENT_ARBITRARY_BYTE_VULNERABILITY VulnerableDriverIncrementArbitraryByte;
+extern KERNEL_CONTROL_PROGRAM_COUNTER_VULNERABILITY VulnerableDriverControlProgramCounter;
