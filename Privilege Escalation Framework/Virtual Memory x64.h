@@ -7,7 +7,7 @@ typedef struct Virtual_Address_x64 {
 		pdSelector : 9,
 		pdpSelector : 9,
 		pml4Selector : 9,
-		: 16;
+		reservedCannonical: 16; //must be sign extended in reference to the first 48bits
 
 } x64VirtualAddress, *Px64VirtualAddress;
 

